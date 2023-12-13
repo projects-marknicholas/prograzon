@@ -1,38 +1,562 @@
-.App {
+:root{
+  --black: #000000;
+  --white: #ffffff;
+  --blue: #78AFE1;
+  --code: #282923;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+.win-a{
+  text-decoration: none;
+  color: var(--black);
+}
+.win-a:hover{
+  text-decoration: underline;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: var(--black);
+  top: 0;
+  z-index: 1000;
+}
+
+nav .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+nav .container .left img {
+  height: 30px;
+}
+
+nav .container .right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+nav .container .right a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  margin: 0 20px 0 0;
+}
+
+#hero{
+  padding: 200px 0 100px 0;
+}
+#hero h1,
+#hero h3,
+#hero span{
+  display: block;
+  text-align: center;
+}
+#hero h1{
+  font-size: 4em;
+}
+#hero h3{
+  font-weight: normal;
+  line-height: 2;
+  font-size: 2em;
+}
+#hero span{
+  margin-top: 20px;
+  line-height: 1.8;
+  font-size: 1.1em;
+}
+
+#about{
+  background-color: var(--black);
+  padding: 20px;
+}
+#about .container .left{
+  width: 40%;
+}
+#about .container .right{
+  width: 49%;
+}
+#about .container .right,
+#benefits .container .right{
+  margin-left: auto;
+  margin-right: 0;
+  overflow: hidden;
+}
+#about .container .right img{
+  width: 100%;
+}
+#about .container .left h1,
+#about .container .left p{
+  color: var(--white);
+}
+#about .container .left h1{
+  font-size: 2.5em;
+}
+#about .container .left p{
+  line-height: 1.7;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+#benefits{
+  padding: 50px 0;
+}
+#benefits .container .left,
+#benefits .container .right{
+  width: 45%;
+}
+#benefits .container .left .divider{
+  height: 5px;
+  width: 100%;
+  background-color: var(--black);
+  margin-top: 12px;
+  font-size: 1.2em;
+}
+#benefits .container .right h1{
+  font-size: 2em;
+}
+#benefits .container .right p{
+  line-height: 1.7;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+.blue-divider{
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--blue);
+  font-size: 1.2em;
+}
+#tech{
+  padding: 50px 0;
+}
+#tech .container p{
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#tech .container img{
+  display: block;
+  margin: auto;
+}
+
+#code-review{
+  background-color: var(--code);
+  padding: 50px 0;
+}
+#code-review .container h1,
+#code-review .container p{
+  color: var(--white);
+}
+#code-review .container h1{
+  font-size: 2.5em;
+}
+#code-review .container p{
+  width: 70%;
+  font-size: 1.2em;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+#code-review .container img{
+  width: 100%;
+  margin-top: 20px;
+}
+.bg{
+  background-color: var(--black);
+  position: relative;
+  padding: 50px 20px;
+}
+#funda{
+  padding: 30px 10px;
+  margin-top: 50px;
+}
+.bg img {
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -50px;
+}
+.bg h1,
+.bg p{
+  color: var(--white);
+  display: block;
+  text-align: center;
+}
+.bg h1{
+  font-size: 2em;
+}
+.bg p{
+  margin: 20px 20%;
+  font-size: 1.2em;
+}
+.mt{
+  margin-top: 50px;
+}
+#ready{
+  padding: 200px 0;
+}
+#ready .container h1{
+  font-size: 3em;
+  text-align: center;
+}
+#ready .container a{
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  width: fit-content;
+  padding: 15px 30px;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 8px;
+}
+footer{
+  padding: 30px;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 2;
+}
+#challenge{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+#challenge .item{
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--black);
+  padding: 10px;
+  border-radius: 5px;
+}
+#challenge .item .tip{
+  background-color: var(--white);
+  color: var(--black);
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: .8em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#challenge .item h2{
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+#challenge .item p{
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+.code-check{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.code-check .item{
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+}
+.code-check .item .flex-code{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.code-check .item .flex-code .right{
+  margin-left: auto;
+  margin-right: 0;
+  width: fit-content;
+}
+.code-check .item .flex-code .left a{
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.entry-code{
+  border: 1px solid orange;
+  padding: 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: .6em;
+  font-weight: bold;
+  color: orange;
+  width: fit-content;
+}
+.success-code{
+  border: 1px solid green;
+  background-color: green;
+  padding: 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: .6em;
+  font-weight: bold;
+  color: var(--white);
+  width: fit-content;
+}
+.fail-code{
+  border: 1px solid red;
+  background-color: red;
+  padding: 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: .6em;
+  font-weight: bold;
+  color: white;
+  width: fit-content;
+}
+.almost-code{
+  border: 1px solid orange;
+  background-color: orange;
+  padding: 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: .6em;
+  font-weight: bold;
+  color: white;
+  width: fit-content;
+}
+#code {
+  width: calc(100% - 20px);
+  overflow: auto;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #282A35;
+}
+
+pre {
+  margin: 0;
+  word-break: break-all;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+pre div{
+  color: black;
+  font-size: 1.2em;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+pre div strong.low{
+  color: red;
+}
+pre div strong.mid{
+  color: orange;
+}
+pre div strong.high{
+  color: green;
+}
+pre div strong.overall-low{
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  display: block;
+  width: fit-content;
+  margin: 10px 0 0 0;
+}
+pre div strong.overall-mid{
+  background-color: orange;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  display: block;
+  width: fit-content;
+  margin: 10px 0 0 0;
+}
+pre div strong.overall-high{
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  display: block;
+  width: fit-content;
+  margin: 10px 0 0 0;
+}
+
+
+.card {
+  border: 1px solid var(--black);
+  border-radius: 8px;
+  padding: 16px;
+  width: calc(100% - 34px);
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--code);
+  color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tab-list {
+  display: flex;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.tab {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px 8px 0 0;
+  margin-right: 4px;
+  background-color: #f0f0f0;
+}
+
+.tab.active {
+  background-color: var(--black);
+  color: var(--white);
+  border-bottom: 2px solid var(--black);
+}
+
+.tab-content {
+  border: 1px solid var(--black);
+  padding: 16px;
+  border-radius: 0 0 8px 8px;
+  margin-top: -1px;
+}
+
+.wn{
+  width: 50%;
+  display: block;
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/*Mobile Styles*/
+@media(max-width: 767px){ 
+  .wn{
+    width: 100%;
+  }
+  #challenge,
+  .code-check{
+    grid-template-columns: 1fr;
+  }
+  #ready .container h1{
+    font-size: 2em;
+    text-align: left;
+  }
+  #ready .container a{
+    width: calc(100% - 60px);
+  }
+  .bg h1{
+    font-size: 1.5em;
+  }
+  .bg p{
+    margin: 20px 0;
+  }
+  #benefits,
+  #tech,
+  #code-review,
+  #ready,
+  #challenge{
+    padding: 20px;
+  }
+  #hero{
+    padding: 100px 20px 100px 20px;
+  }
+  #hero h1,
+  #hero h3,
+  #hero span{
+    text-align: left;
+  }
+  #hero h1{
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-size: 3em;
+  }
+  #hero h3{
+    font-size: 1.5em;
+    line-height: 1.2;
+  }
+  #hero span{
+    font-size: 1.1em;
+  }
+  .flex{
+    display: block;
+  }
+  #about .container .left,
+  #about .container .right,
+  #benefits .container .left,
+  #benefits .container .right{
+    width: 100%;
+  }
+  #benefits .container .left h3{
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  #benefits .container .left .divider{
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+  #about .container .left h1{
+    font-size: 2em;
+  }
+  #about .container .right{
+    margin-top: 20px;
+  }
+  #benefits .container .right h1{
+    margin-top: 20px;
+  }
+  #tech .container img{
+    width: 100%;
+  }
+  #code-review .container h1{
+    font-size: 2em;
+  }
+  #code-review .container p{
+    width: 100%;
+  }
+  .bg img{
+    height: auto;
+    width: 100%;
+  }
+  .card{
+    width: calc(90% - 34px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Desktop Styles */
+@media(min-width: 1200px) {
+  .container {
+    width: 1140px;
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Tablet Styles */
+@media(min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+}
+
+/* Laptop Styles */
+@media(min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
   }
 }
